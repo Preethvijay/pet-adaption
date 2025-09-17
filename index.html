@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawfect Adoptions - Find Your Furry Friend</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">Pawfect Adoptions</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#pets">Pets</a></li>
+                <li><a href="#adopt">Adopt</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Pawfect Adoptions</h1>
+            <p>Find your perfect pet companion today. All our animals are healthy, vaccinated, and ready for a loving home.</p>
+            <button onclick="scrollToSection('pets')">Browse Pets</button>
+        </div>
+    </section>
+
+    <section id="pets" class="pets-section">
+        <h2>Available Pets</h2>
+        <div class="pets-grid" id="petsGrid">
+            <!-- Pets will be populated by JavaScript -->
+        </div>
+        <button onclick="loadMorePets()">Load More</button>
+    </section>
+
+    <section id="adopt" class="adopt-section">
+        <h2>Adopt a Pet</h2>
+        <form id="adoptForm" onsubmit="handleAdopt(event)">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <select id="petSelect">
+                <option value="">Select a Pet</option>
+                <!-- Options populated by JS -->
+            </select>
+            <textarea placeholder="Why do you want to adopt this pet?" required></textarea>
+            <button type="submit">Submit Application</button>
+        </form>
+    </section>
+
+    <footer id="contact">
+        <p>&copy; 2025 Pawfect Adoptions. All rights reserved. | Email: info@pawfectadoptions.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
